@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_loginsignup_dashboard/view/custom_widget/my_theme.dart';
-
 import 'view/welcome_page/welcome_page.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
-      home: const WelcomePage(),
+      home: WelcomePage(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_loginsignup_dashboard/view/custom_widget/my_theme.dart';
+import 'package:welcome_loginsignup_dashboard/view/login/login_page.dart';
 
 import 'components/background.dart';
 import 'components/custom_button.dart';
@@ -9,8 +10,9 @@ class WelcomePage extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  loginButtonClickHandler() {
-    print('Login Button Click');
+  loginButtonClickHandler(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (builder) => LoginPage()));
   }
 
   signButtonClickHandler() {
@@ -38,7 +40,7 @@ class WelcomePage extends StatelessWidget {
                 buttonColor: MyTheme.loginButtonColor,
                 buttontext: 'LOGIN',
                 textColor: Colors.white,
-                handleButtonClick: loginButtonClickHandler,
+                handleButtonClick: () => loginButtonClickHandler(context),
               ),
               const SizedBox(
                 height: 20,

@@ -5,6 +5,7 @@ class MyTheme {
   static Color loginButtonColor = Colors.purple;
   static Color singupButtonColor = Colors.grey.shade400;
   static Color loginPageBoxColor = Colors.lightBlue.shade50;
+  //static Color loginPaggeBoxColor = Color(0xffcccff);
 
   static ThemeData lightTheme(BuildContext context) => ThemeData(
         canvasColor: Colors.white,

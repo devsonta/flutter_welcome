@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_loginsignup_dashboard/view/custom_widget/my_theme.dart';
 import 'package:welcome_loginsignup_dashboard/view/login/components/password_filed.dart';
+import 'package:welcome_loginsignup_dashboard/view/signup/signup.dart';
 import 'package:welcome_loginsignup_dashboard/view/welcome_page/components/custom_button.dart';
 
-import '../signup/signup.dart';
 import 'components/login_background.dart';
 import 'components/textfield_decoration.dart';
 import 'components/userId_text_field.dart';

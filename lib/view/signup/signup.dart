@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:welcome_loginsignup_dashboard/controller/signup_controller.dart';
 import 'package:welcome_loginsignup_dashboard/view/custom_widget/my_theme.dart';
 import 'package:welcome_loginsignup_dashboard/view/login/login_page.dart';
 import 'package:welcome_loginsignup_dashboard/view/signup/components/gender_section.dart';
@@ -16,6 +18,8 @@ class SignUp extends StatelessWidget {
   TextEditingController passController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
 
+  SignUpController signUpController = Get.put(SignUpController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +36,7 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const SignUpProfilePicture(),
+              SignUpProfilePicture(),
               const SizedBox(
                 height: 20,
               ),
@@ -59,18 +63,8 @@ class SignUp extends StatelessWidget {
               SignUpTextFieldDecoration(
                 child: SignUpUserIdTextField(
                     useridController: mobileController,
-                    userIdErrorText: 'Mobile Id can not be empty',
-                    userIdHintText: 'Enter Mobile',
-                    userIdHintTextColor: Colors.purple,
-                    useridTextFieldPrefixIcon: Icons.person,
-                    useridTextFieldPrefixIconColor: Colors.purple,
-                    onUseridValueChange: (value) {}),
-              ),
-              SignUpTextFieldDecoration(
-                child: SignUpUserIdTextField(
-                    useridController: mobileController,
-                    userIdErrorText: 'Mobile Id can not be empty',
-                    userIdHintText: 'Enter Mobile',
+                    userIdErrorText: 'Mobile Number can not be empty',
+                    userIdHintText: 'Enter Mobile Number',
                     userIdHintTextColor: Colors.purple,
                     useridTextFieldPrefixIcon: Icons.person,
                     useridTextFieldPrefixIconColor: Colors.purple,
